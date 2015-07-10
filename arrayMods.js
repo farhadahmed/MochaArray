@@ -1,4 +1,5 @@
 
+//Function that returns true if duplicate vals exist
 exports.arrDup = function (arr) {
   for (i = 0; i < arr.length; i++) {
     for (j = 0; j < arr.length; j++) {
@@ -9,6 +10,8 @@ exports.arrDup = function (arr) {
   }
   return false;
 }
+
+//Function that takes array argument and returns new array without duplicate vals
 
 //Credit: I got the idea for this function from georg on stackoverflow:
 // http://stackoverflow.com/questions/9229645/remove-duplicates-from-javascript-array
@@ -21,6 +24,14 @@ exports.unique = function(arr) {
     the value will not be pushed to the new array.*/
   });
 };
+
+//Implement push function
+exports.pushTo = function(arr, value) {
+  arr[arr.length] = value;
+  return arr
+};
+
+
 
 //arr = process.argv[2];
 //console.log(exports.arrDup(arr));
