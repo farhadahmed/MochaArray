@@ -5,11 +5,11 @@ exports.arrDup = function (arr) {
     for (j = 0; j < arr.length; j++) {
       if (arr[i] === arr[j]) {
         return true
-      }
-    }
-  }
+      };
+    };
+  };
   return false;
-}
+};
 
 //Function that takes array argument and returns new array without duplicate vals
 
@@ -35,17 +35,26 @@ exports.pushTo = function(arr, value) {
 exports.popFrom = function(arr) {
   arr.length = arr.length - 1;
   return arr;
-}
+};
 
 //Implement shift function
 exports.shiftFrom = function(arr) {
-
-}
+  var value = arr[0];
+  for (i = 0; i < arr.length; i++) {
+    arr[i] = arr[i+1];
+  };
+  arr.length--;
+  return arr;
+};
 
 //Implement unshift function
 exports.unshiftTo = function(arr, value) {
-
-}
+  for (i = arr.length; i > 0; i--) {
+    arr[i] = arr[i - 1];
+  };
+  arr[0] = value;
+  return arr;
+};
 
 
 //arr = process.argv[2];

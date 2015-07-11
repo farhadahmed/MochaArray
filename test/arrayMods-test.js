@@ -13,5 +13,11 @@ describe('arrayMods.js', function() {
   });
   it('will say ["foo"] when passed ["foo", "bar"]', function() {
     expect(arrayMods.popFrom(['foo', 'bar'])).to.eql(['foo']);
-  })
+  });
+  it('will say ["foo", "bar"] when passed ["foobar", "foo", "bar"]', function() {
+    expect(arrayMods.shiftFrom(['foobar', 'foo', 'bar'])).to.eql(['foo', 'bar']);
+  });
+  it('will say ["foobar", "foo", "bar"] when passed ["foo", "bar"], "foobar"', function() {
+    expect(arrayMods.unshiftTo(['foo', 'bar'], 'foobar')).to.eql(['foobar', 'foo', 'bar']);
+  });
 });
