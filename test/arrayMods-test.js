@@ -11,4 +11,7 @@ describe('arrayMods.js', function() {
   it('will say ["foo", "bar"] when passed ["foo"], "bar"', function() {
     expect(arrayMods.pushTo(['foo'], 'bar')).to.eql(['foo', 'bar']);
   });
+  it('will say ["foo"] when passed ["foo", "bar"]', function() {
+    expect(arrayMods.popFrom(['foo', 'bar'])).to.eql(['foo']);
+  })
 });

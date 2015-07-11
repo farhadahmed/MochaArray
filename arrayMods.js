@@ -31,6 +31,21 @@ exports.pushTo = function(arr, value) {
   return arr
 };
 
+//Implement pop function
+exports.popFrom = function(arr) {
+  arr.length = arr.length - 1;
+  return arr;
+}
+
+//Implement shift function
+exports.shiftFrom = function(arr) {
+
+}
+
+//Implement unshift function
+exports.unshiftTo = function(arr, value) {
+
+}
 
 
 //arr = process.argv[2];
