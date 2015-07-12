@@ -56,7 +56,42 @@ exports.unshiftTo = function(arr, value) {
   return arr;
 };
 
+//Implement frequency2
+exports.frequency2 = function(arr) {
+  //Return a hashtable where each character is key and number of char occurances is key.
+  function frequencyInString(s) {
+    var hashtable = {};
+    //for each character in the string, do the following
+    for (var i = 0; i < s.length; i++) {
+      var currentCharacter = s.charAt(i);
+      var currentCharacter = currentCharacter.toLowerCase();
+      //Check if hashtable contains the character and if so, add 1, otherwise val for that currentCharacter = 1
+      if (hashtable[currentCharacter]) {
+        hashtable[currentCharacter]++;
+      } else {
+        (hashtable[currentCharacter]) = 1;
+      }
+    }
+    return hashtable;
+  }
 
-//arr = process.argv[2];
-//console.log(exports.arrDup(arr));
-//console.log(exports.unique(arr));
+  //creates one string of all array values
+  var arrString = arr.join('');
+  var highestHashValue = 0;
+  var mostCommonLetters = [];
+  var frequencies = frequencyInString(arrString);
+
+  //This for loop will return the largest value/number in the hashtable
+  for (var letter in frequencies) {
+    if (frequencies[letter] > highestHashValue) {
+      highestHashValue = frequencies[letter];
+    }
+  }
+  //This loop finds the letter with largest value
+  for (var letter in frequencies) {
+    if (frequencies[letter] === highestHashValue) {
+      mostCommonLetters.push(letter);
+    }
+  }
+  return mostCommonLetters;
+}

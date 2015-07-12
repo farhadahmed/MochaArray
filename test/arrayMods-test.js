@@ -20,4 +20,7 @@ describe('arrayMods.js', function() {
   it('will say ["foobar", "foo", "bar"] when passed ["foo", "bar"], "foobar"', function() {
     expect(arrayMods.unshiftTo(['foo', 'bar'], 'foobar')).to.eql(['foobar', 'foo', 'bar']);
   });
+  it('will say "d" when passed ["azr", "bc", "dddd"]', function() {
+    expect(arrayMods.frequency2(['azr', 'bc', 'dddd'])).to.eql(['d']);
+  })
 });
