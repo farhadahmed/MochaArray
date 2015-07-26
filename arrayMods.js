@@ -40,12 +40,12 @@ exports.popFrom = function(arr) {
 
 //Implement shift function
 exports.shiftFrom = function(arr) {
-  var value = arr[0];
+  var val = arr[0];
   for (i = 0; i < arr.length; i++) {
     arr[i] = arr[i+1];
   };
   arr.length--;
-  return arr;
+  return val;
 };
 
 //Implement unshift function
