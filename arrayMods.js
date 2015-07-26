@@ -54,7 +54,7 @@ exports.unshiftTo = function(arr, value) {
     arr[i] = arr[i - 1];
   };
   arr[0] = value;
-  return arr;
+  return arr.length;
 };
 
 //Implement frequency2
