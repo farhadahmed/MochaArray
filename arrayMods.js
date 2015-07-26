@@ -33,8 +33,9 @@ exports.pushTo = function(arr, value) {
 
 //Implement pop function
 exports.popFrom = function(arr) {
+  var val = arr[arr.length-1];
   arr.length = arr.length - 1;
-  return arr;
+  return val;
 };
 
 //Implement shift function
