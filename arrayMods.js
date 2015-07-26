@@ -28,7 +28,7 @@ exports.unique = function(arr) {
 //Implement push function
 exports.pushTo = function(arr, value) {
   arr[arr.length] = value;
-  return arr
+  return arr.length;
 };
 
 //Implement pop function
