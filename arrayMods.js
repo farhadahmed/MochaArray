@@ -2,7 +2,7 @@
 //Function that returns true if duplicate vals exist
 exports.arrDup = function (arr) {
   for (i = 0; i < arr.length; i++) {
-    for (j = 0; j < arr.length; j++) {
+    for (j = i+1; j < arr.length; j++) {
       if (arr[i] === arr[j]) {
         return true
       };
